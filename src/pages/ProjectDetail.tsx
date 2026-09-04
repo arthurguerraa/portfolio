@@ -40,17 +40,25 @@ export function ProjectDetail() {
         <div className="space-y-8">
           <div>
             <h2 className="font-mono text-primary text-sm mb-2">$ problema</h2>
-            <p className="text-muted-foreground leading-relaxed">{project.problem}</p>
+            <p className="text-muted-foreground leading-relaxed">
+              {project.problem}
+            </p>
           </div>
 
           <div>
-            <h2 className="font-mono text-primary text-sm mb-2">$ minha_funcao</h2>
-            <p className="text-muted-foreground leading-relaxed">{project.role}</p>
+            <h2 className="font-mono text-primary text-sm mb-2">
+              $ minha_funcao
+            </h2>
+            <p className="text-muted-foreground leading-relaxed">
+              {project.role}
+            </p>
           </div>
 
           {project.highlights && project.highlights.length > 0 && (
             <div>
-              <h2 className="font-mono text-primary text-sm mb-2">$ destaques</h2>
+              <h2 className="font-mono text-primary text-sm mb-2">
+                $ destaques
+              </h2>
               <ul className="list-disc list-inside space-y-1 text-muted-foreground">
                 {project.highlights.map((item) => (
                   <li key={item}>{item}</li>
@@ -61,28 +69,47 @@ export function ProjectDetail() {
 
           {project.result && (
             <div>
-              <h2 className="font-mono text-primary text-sm mb-2">$ resultado</h2>
-              <p className="text-muted-foreground leading-relaxed">{project.result}</p>
+              <h2 className="font-mono text-primary text-sm mb-2">
+                $ resultado
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                {project.result}
+              </p>
             </div>
           )}
         </div>
 
         <div className="flex gap-4 mt-10">
           {project.repoUrl && (
-            <Button asChild variant="outline" className="font-mono">
-              <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
-                <SiGithub size={16} className="mr-2" />
-                Código
-              </a>
-            </Button>
+            <Button
+              variant="outline"
+              className="font-mono"
+              render={
+                <a
+                  href={project.repoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <SiGithub size={16} className="mr-2" />
+                  Código
+                </a>
+              }
+            />
           )}
           {project.liveUrl && (
-            <Button asChild className="font-mono">
-              <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                <ExternalLink size={16} className="mr-2" />
-                Ver ao vivo
-              </a>
-            </Button>
+            <Button
+              className="font-mono"
+              render={
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <ExternalLink size={16} className="mr-2" />
+                  Ver ao vivo
+                </a>
+              }
+            />
           )}
         </div>
       </div>

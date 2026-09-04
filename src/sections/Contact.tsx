@@ -5,11 +5,6 @@ import { Button } from "@/components/ui/button";
 
 const CONTACT_LINKS = [
   {
-    icon: Mail,
-    label: "Email",
-    href: "mailto:seu-email@exemplo.com", // TODO: trocar pelo seu email real
-  },
-  {
     icon: SiGithub,
     label: "GitHub",
     href: "https://github.com/arthurguerraa",
@@ -18,6 +13,11 @@ const CONTACT_LINKS = [
     icon: LinkedInIcon,
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/arthurguerraa/",
+  },
+  {
+    icon: Mail,
+    label: "Email",
+    href: "mailto:seu-email@exemplo.com", // TODO: trocar pelo seu email real
   },
 ];
 
@@ -34,20 +34,19 @@ export function Contact() {
           qualquer um dos canais abaixo.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex gap-6 justify-center">
           {CONTACT_LINKS.map(({ icon: Icon, label, href }) => (
-            <Button
+            
+            <a
               key={label}
-              asChild
-              variant="outline"
-              size="lg"
-              className="font-mono"
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="text-foreground/70 hover:text-primary transition-colors"
             >
-              <a href={href} target="_blank" rel="noopener noreferrer">
-                <Icon size={18} className="mr-2" />
-                {label}
-              </a>
-            </Button>
+              <Icon size={28} />
+            </a>
           ))}
         </div>
       </div>

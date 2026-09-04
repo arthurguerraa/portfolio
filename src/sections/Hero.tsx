@@ -21,20 +21,27 @@ export function Hero() {
         </p>
 
         <p className="text-base text-muted-foreground/80 mb-10 max-w-xl mx-auto">
-          Construo aplicações do banco de dados à interface, com foco em
-          código limpo e experiências bem pensadas.
+          Construo aplicações do banco de dados à interface, com foco em código
+          limpo e experiências bem pensadas.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button asChild size="lg" className="font-mono">
-            <a href="#projetos">Ver Projetos</a>
-          </Button>
+          <Button
+            size="lg"
+            className="font-mono"
+            render={<a href="#projetos">Ver Projetos</a>}
+          />
 
-          <Button asChild size="lg" variant="outline" className="font-mono">
-            <a href="/curriculo-arthur-guerra.pdf" download>
-              Baixar CV
-            </a>
-          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            className="font-mono"
+            render={
+              <a href="/curriculo-arthur-guerra.pdf" download>
+                Baixar CV
+              </a>
+            }
+          />
         </div>
       </div>
     </section>
