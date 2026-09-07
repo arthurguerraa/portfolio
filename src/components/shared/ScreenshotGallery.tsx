@@ -9,17 +9,15 @@ export function ScreenshotGallery({ screenshots }: ScreenshotGalleryProps) {
     <div className="space-y-12">
       {screenshots.map((shot) => (
         <div key={shot.title} className="space-y-3">
-          <div className="rounded-lg overflow-hidden border border-border">
+          <div className="rounded-lg overflow-hidden border border-border flex justify-center bg-muted/20">
             <img
               src={shot.imageUrl}
               alt={shot.title}
-              className="w-full h-auto"
+              className="max-w-full h-auto"
             />
           </div>
           <div>
-            <h3 className="font-mono text-sm text-primary mb-1">
-              {shot.title}
-            </h3>
+            <h3 className="font-mono text-sm text-primary mb-1">{shot.title}</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
               {shot.description}
             </p>

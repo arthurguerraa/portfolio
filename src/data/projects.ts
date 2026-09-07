@@ -27,25 +27,79 @@ export const projects: Project[] = [
       "Integração com API do TMDB e envio de email transacional via Nodemailer/Gmail SMTP",
       "Camadas de segurança com Helmet e express-rate-limit",
     ],
-    imageUrl: "/src/assets/images/cinetrack-preview.png", /* colocar o print do projeto */
+    imageUrl: "/src/assets/images/cinetrack-index.png", /* colocar o print do projeto */
     screenshots: [
       {
-        imageUrl: "/src/assets/images/cinetrack-home.png", /* TODO: substituir pelo print real */
+        imageUrl: "/images/cinetrack-home.png", 
         title: "Home",
         description:
           "Tela inicial com filmes em destaque e busca rápida de títulos.",
       },
       {
-        imageUrl: "/src/assets/images/cinetrack-filme.png", /* TODO: substituir pelo print real */
-        title: "Detalhe do filme",
+        imageUrl: "/images/cinetrack-perfil.png", 
+        title: "Perfil do Usuário",
         description:
-          "Página individual do filme com nota ponderada, avaliações da comunidade e opção de adicionar a uma lista.",
+          "Página de perfil do usuário onde apresenta informações como nome, email e avaliações de filmes já realizadas.",
       },
       {
-        imageUrl: "/src/assets/images/cinetrack-listas.png", /* TODO: substituir pelo print real */
+        imageUrl: "/images/cinetrack-editar-avaliacao.png", 
+        title: "Editar avaliação",
+        description:
+          "Janela onde o usuário pode editar a nota e comentário já realizado sobre o filme.",
+      },
+      {
+        imageUrl: "/images/cinetrack-minhas-listas.png", 
         title: "Minhas listas",
         description:
-          "Listas personalizadas criadas pelo usuário, com opção de torná-las públicas ou privadas.",
+          "Página das listas que mostra todas as litas que o usuário criou e uma opção para criar uma lista nova.",
+      },
+      {
+        imageUrl: "/images/cinetrack-editar-lista.png", 
+        title: "Editar Lista",
+        description:
+          "Janela onde o usuário pode alterar o nome, a descrição e a visibilidade da lista.",
+      },
+      {
+        imageUrl: "/images/cinetrack-ver-lista.png", 
+        title: "Ver Filmes",
+        description:
+          "Janela onde o usuário pode visualizar os filmes que foram adicionados na lista.",
+      },
+      {
+        imageUrl: "/images/cinetrack-ranking.png", 
+        title: "Ranking",
+        description:
+          "Página onde o usuário consegue ver os filmes mais bem avaliados pela comunidade podendo escolher o top 10, top 20 e top 50.",
+      },
+      {
+        imageUrl: "/images/cinetrack-cadastro.png", 
+        title: "Cadastro",
+        description:
+          "Página onde o usuário faz o seu cadastro inserindo seu nome, email, senha e confirmando a senha.",
+      },
+      {
+        imageUrl: "/images/cinetrack-confirmar-email.png", 
+        title: "Confirmar Email",
+        description:
+          "Página onde o usuário confirma o seu email inserindo um código de 6 dígitos que foi enviado para o email informado na tela de cadastro.",
+      },
+      {
+        imageUrl: "/images/cinetrack-login.png", 
+        title: "Login",
+        description:
+          "Página onde o usuário realiza login com seu email e senha.",
+      },
+      {
+        imageUrl: "/images/cinetrack-esqueci-senha.png", 
+        title: "Esqueci Senha",
+        description:
+          "Página onde o usuário informa seu email para receber o código para atualização de senha.",
+      },
+      {
+        imageUrl: "/images/cinetrack-redefinir-senha.png", 
+        title: "Redefinir Senha",
+        description:
+          "Página onde o usuário insere o código, a nova senha e a confirmação da nova senha da sua conta.",
       },
     ],
     liveUrl: undefined,

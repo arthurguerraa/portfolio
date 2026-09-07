@@ -4,6 +4,7 @@ import { SiGithub } from "@icons-pack/react-simple-icons";
 import { ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { ScreenshotGallery } from "@/components/shared/ScreenshotGallery";
 import { projects } from "@/data/projects";
 
 export function ProjectDetail() {
@@ -75,6 +76,15 @@ export function ProjectDetail() {
               <p className="text-muted-foreground leading-relaxed">
                 {project.result}
               </p>
+            </div>
+          )}
+
+          {project.screenshots && project.screenshots.length > 0 && (
+            <div>
+              <h2 className="font-mono text-primary text-sm mb-4">
+                $ telas
+              </h2>
+              <ScreenshotGallery screenshots={project.screenshots} />
             </div>
           )}
         </div>
