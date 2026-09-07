@@ -39,7 +39,7 @@ export function ProjectDetail() {
 
         <div className="space-y-8">
           <div>
-            <h2 className="font-mono text-primary text-sm mb-2">$ problema</h2>
+            <h2 className="font-mono text-primary text-sm mb-2">$ sobre_o_projeto</h2>
             <p className="text-muted-foreground leading-relaxed">
               {project.problem}
             </p>

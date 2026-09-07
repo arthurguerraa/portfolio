@@ -5,11 +5,11 @@ export const projects: Project[] = [
     id: "cinetrack",
     title: "CineTrack",
     description:
-      "Plataforma de avaliação de filmes com listas personalizadas e ranking ponderado entre nota do TMDB e avaliações da comunidade.",
+      "Plataforma de avaliação de filmes com listas personalizadas e ranking que junta as notas do TMDB e as avaliações da comunidade.",
     problem:
-      "Resolve o problema de 'onde eu guardo minha opinião sobre filmes que assisti', de um jeito mais pessoal do que só confiar na nota de um agregador externo.",
+       "Uma plataforma de avaliação de filmes onde o usuário busca títulos, avalia com nota e comentário, cria listas personalizadas (públicas ou privadas) e acompanha um ranking dos filmes mais bem avaliados. Desenvolvido para explorar a construção de uma aplicação completa do zero, unindo dados externos (TMDB) com avaliações reais da comunidade.",
     role:
-      "Desenvolvido sozinho, do zero — banco de dados, API REST e frontend. Responsável pela modelagem do banco (incluindo relacionamentos N:N entre filme/gênero e lista/filme), toda a arquitetura do backend e o frontend inteiro, incluindo design system e componentes reutilizáveis.",
+      "Desenvolvi o projeto todo, desde o  banco de dados, API REST, backend até o frontend.",
     techStack: [
       "HTML5",
       "Tailwind CSS v4",
@@ -38,9 +38,9 @@ export const projects: Project[] = [
     description:
       "Plataforma de análise estatística de futebol com métricas de desempenho de times por liga e rodada.",
     problem:
-      "Processa dados históricos de partidas para gerar padrões de gols, escanteios e cartões dentro e fora de casa, facilitando análise de desempenho por liga e rodada.",
+       "Plataforma de análise estatística de futebol que processa dados históricos de partidas para gerar métricas de desempenho de times por liga e rodada, incluindo padrões de gols, escanteios e cartões dentro e fora de casa. Desenvolvido em parceria, com foco no front-end da aplicação.",
     role:
-      "Responsável pelo desenvolvimento front-end completo da aplicação, desde a arquitetura de arquivos e sistema de design até a integração com a API REST desenvolvida pelo parceiro de back-end.",
+      "Responsável pelo desenvolvimento front-end da aplicação, desde a arquitetura de arquivos e sistema de design até a integração com a API REST desenvolvida pelo parceiro de back-end.",
     techStack: ["HTML", "CSS", "JavaScript", "REST API", "JWT", "Git", "GitHub Pages"],
     highlights: [
       "Sistema de design próprio com variáveis CSS e componentes seguindo padrão BEM",
