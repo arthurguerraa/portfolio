@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const NAV_LINKS = [
   { label: "Sobre", href: "#sobre" },
@@ -10,19 +11,18 @@ const NAV_LINKS = [
 export function Navbar() {
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     function handleScroll() {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY < 50) {
-        // sempre visível no topo da página
         setVisible(true);
       } else if (currentScrollY > lastScrollY) {
-        // rolando pra baixo -> esconde
         setVisible(false);
       } else {
-        // rolando pra cima -> mostra
         setVisible(true);
       }
 
@@ -32,6 +32,14 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
+
+  function handleNavClick(e: React.MouseEvent, href: string) {
+    if (location.pathname !== "/") {
+      e.preventDefault();
+      navigate(`/${href}`);
+    }
+    // se já está na Home, deixa o comportamento padrão do <a href="#..."> agir normalmente
+  }
 
   return (
     <header
@@ -45,6 +53,7 @@ export function Navbar() {
           <a
             key={link.href}
             href={link.href}
+            onClick={(e) => handleNavClick(e, link.href)}
             className="text-foreground/80 hover:text-primary transition-colors"
           >
             {link.label}
