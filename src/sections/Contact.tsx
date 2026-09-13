@@ -1,25 +1,20 @@
-import { Mail } from "lucide-react";
 import { SiGithub } from "@icons-pack/react-simple-icons";
+import { Mail } from "lucide-react";
+import { toast } from "sonner";
 import { LinkedInIcon } from "@/components/shared/LinkedInIcon";
-import { Button } from "@/components/ui/button";
 
-const CONTACT_LINKS = [
-  {
-    icon: SiGithub,
-    label: "GitHub",
-    href: "https://github.com/arthurguerraa",
-  },
-  {
-    icon: LinkedInIcon,
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/arthurguerraa/",
-  },
-  {
-    icon: Mail,
-    label: "Email",
-    href: "arthurguerra9910@gmail.com",
-  },
-];
+const EMAIL = "arthurguerra9910@gmail.com"; 
+
+async function handleCopyEmail() {
+  try {
+    await navigator.clipboard.writeText(EMAIL);
+    toast.success("Email copiado!", {
+      description: EMAIL,
+    });
+  } catch {
+    toast.error("Não foi possível copiar o email.");
+  }
+}
 
 export function Contact() {
   return (
@@ -35,19 +30,32 @@ export function Contact() {
         </p>
 
         <div className="flex gap-6 justify-center">
-          {CONTACT_LINKS.map(({ icon: Icon, label, href }) => (
-            
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={label}
-              className="text-foreground/70 hover:text-primary transition-colors"
-            >
-              <Icon size={28} />
-            </a>
-          ))}
+          <a
+            href="https://github.com/arthurguerraa"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="text-foreground/70 hover:text-primary transition-colors"
+          >
+            <SiGithub size={28} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/arthurguerraa/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="text-foreground/70 hover:text-primary transition-colors"
+          >
+            <LinkedInIcon size={28} />
+          </a>
+          <button
+            type="button"
+            onClick={handleCopyEmail}
+            aria-label="Copiar email"
+            className="text-foreground/70 hover:text-primary transition-colors cursor-pointer"
+          >
+            <Mail size={28} />
+          </button>
         </div>
       </div>
     </section>

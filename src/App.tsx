@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { Toaster } from "@/components/ui/sonner";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Home } from "@/pages/Home";
@@ -18,6 +19,7 @@ function AppContent() {
         </Routes>
       </main>
       <Footer showSocialLinks={!isHome} />
+      <Toaster />
     </div>
   );
 }
