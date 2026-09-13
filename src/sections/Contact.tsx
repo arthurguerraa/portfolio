@@ -17,7 +17,7 @@ const CONTACT_LINKS = [
   {
     icon: Mail,
     label: "Email",
-    href: "mailto:seu-email@exemplo.com", // TODO: trocar pelo seu email real
+    href: "arthurguerra9910@gmail.com",
   },
 ];
 

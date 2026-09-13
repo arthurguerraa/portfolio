@@ -17,20 +17,7 @@ export function About() {
           </p>
 
           <p>
-            O que mais me motiva como desenvolvedor é construir aplicações do
-            zero, ponta a ponta — da modelagem do banco de dados à interface
-            que o usuário final vai usar. Gosto de entender o problema por
-            completo antes de escrever a primeira linha de código, e de tomar
-            as decisões de arquitetura que vão sustentar o projeto conforme
-            ele cresce.
-          </p>
-
-          <p>
-            Isso me levou a desenvolver projetos completos sozinho — desde a
-            modelagem de banco de dados e autenticação segura, até o design
-            system e a experiência de uso da interface — sempre buscando
-            entender cada camada da aplicação, não só a parte que é mais
-            confortável.
+            Comecei com projetos mais focados no front-end, porém conforme fui aprendendo backend e banco de dados no curso técnico e na faculdade, fui aos poucos criando aplicações full-stack, para entender melhor e ter um maior controle da arquitetura do projeto. 
           </p>
         </div>
       </div>
