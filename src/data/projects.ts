@@ -149,4 +149,49 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/arthurguerraa/Goal-Radar",
     featured: false,
   },
+  {
+  id: "the-batman-landing",
+  title: "The Batman — Landing Page",
+  description:
+    "Landing page fan-made inspirada no filme The Batman (2022), com foco em animações, efeitos visuais temáticos e boas práticas de performance e acessibilidade.",
+  problem:
+    "Projeto desenvolvido para ir além de uma página estática simples, explorando efeitos visuais avançados (parallax, glitch, chuva animada em canvas, efeito lanterna) e interatividade rica (lightbox, carrossel, player de áudio customizado), tudo em JavaScript puro, sem frameworks ou bibliotecas externas.",
+  role:
+    "Desenvolvido sozinho, do zero, incluindo toda a estrutura HTML semântica, o tema visual customizado no Tailwind e todas as animações e interações em JavaScript vanilla.",
+  techStack: ["HTML5", "Tailwind CSS v4", "JavaScript"],
+  highlights: [
+    "Preloader customizado com barra de progresso baseada no carregamento real das imagens",
+    "Efeito parallax no Hero e chuva animada em <canvas> com ângulo e velocidade configuráveis",
+    "Efeito 'lanterna' que revela a imagem do elenco ao redor do cursor",
+    "Indicador de seção ativa no menu sincronizado ao scroll via IntersectionObserver",
+    "Player de áudio customizado com Web Audio API, com loop sample-accurate de trecho da trilha sonora",
+    "Trailer carregado sob demanda (lazy load do iframe do YouTube) só após clique do usuário",
+    "Lightbox da galeria com navegação por teclado (setas e Esc)",
+    "Atenção a acessibilidade: aria-label, aria-expanded, contraste revisado para WCAG AA",
+  ],
+  imageUrl: "/images/batman-hero.png", 
+  screenshots: [
+    {
+      imageUrl: "/images/batman-hero.png", // TODO: substituir pelo print real
+      title: "Hero",
+      description:
+        "Seção inicial com efeito parallax, chuva animada em canvas e glitch no título ao passar o mouse.",
+    },
+    {
+      imageUrl: "/images/batman-galeria.png", 
+      title: "Galeria",
+      description:
+        "Lightbox de cenas do filme com navegação por teclado e cursor customizado.",
+    },
+    {
+      imageUrl: "/images/batman-avaliacoes.png", 
+      title: "Avaliações",
+      description:
+        "Carrossel automático de críticas com contagem numérica animada nas notas.",
+    },
+  ],
+  liveUrl: "https://arthurguerraa.github.io/landing-page-the-batman/",
+  repoUrl: "https://github.com/arthurguerraa/landing-page-the-batman",
+  featured: false,
+},
 ];
