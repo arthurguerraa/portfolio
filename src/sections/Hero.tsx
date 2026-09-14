@@ -22,7 +22,7 @@ export function Hero() {
 
         <p className="text-base text-muted-foreground/80 mb-10 max-w-xl mx-auto">
           Construo aplicações do banco de dados à interface, com foco em código
-          limpo e experiências bem pensadas.
+          limpo e uma boa experiência para o usuário.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
