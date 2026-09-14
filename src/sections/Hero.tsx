@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MatrixRain } from "@/effects/MatrixRain";
+import { TerminalText } from "@/components/shared/TerminalText";
 
 export function Hero() {
   return (
@@ -16,14 +17,14 @@ export function Hero() {
           Arthur Guerra
         </h1>
 
-        <p className="text-lg sm:text-xl text-muted-foreground mb-2">
+        <TerminalText className="text-lg sm:text-xl text-muted-foreground mb-2">
           Desenvolvedor Full Stack
-        </p>
+        </TerminalText>
 
-        <p className="text-base text-muted-foreground/80 mb-10 max-w-xl mx-auto">
+        <TerminalText className="mb-10 mx-auto text-center">
           Construo aplicações do banco de dados à interface, com foco em código
           limpo e uma boa experiência para o usuário.
-        </p>
+        </TerminalText>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button

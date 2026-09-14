@@ -2,6 +2,7 @@ import { SiGithub } from "@icons-pack/react-simple-icons";
 import { Mail } from "lucide-react";
 import { toast } from "sonner";
 import { LinkedInIcon } from "@/components/shared/LinkedInIcon";
+import { TerminalText } from "@/components/shared/TerminalText";
 
 const EMAIL = "arthurguerra9910@gmail.com"; 
 
@@ -24,10 +25,10 @@ export function Contact() {
         <h2 className="text-3xl sm:text-4xl font-bold font-mono text-foreground mb-4">
           Vamos conversar?
         </h2>
-        <p className="text-muted-foreground mb-10">
+        <TerminalText className="text-muted-foreground mb-10">
           Estou aberto a oportunidades e projetos. Entre em contato por
           qualquer um dos canais abaixo.
-        </p>
+        </TerminalText>
 
         <div className="flex gap-6 justify-center">
           <a
