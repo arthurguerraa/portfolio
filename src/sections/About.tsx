@@ -3,7 +3,7 @@ import { TerminalText } from "@/components/shared/TerminalText";
 export function About() {
   return (
     <section id="sobre" className="py-24 px-6 bg-background">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <p className="font-mono text-primary text-sm mb-2">$ cat sobre-mim.txt</p>
 
         <h2 className="text-3xl sm:text-4xl font-bold font-mono text-foreground mb-8">
