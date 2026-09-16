@@ -145,8 +145,8 @@ export const projects: Project[] = [
         "Comparação questão a questão entre a resposta do usuário e o gabarito oficial do INEP.",
     },
   ],
-  liveUrl: undefined, 
-  repoUrl: "https://arthurguerraa.github.io/projeto-simulado-enade/#/", 
+  liveUrl: "https://arthurguerraa.github.io/projeto-simulado-enade/#/", 
+  repoUrl: "https://github.com/arthurguerraa/projeto-simulado-enade", 
   featured: false,
 },
   {
