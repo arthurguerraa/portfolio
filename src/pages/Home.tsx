@@ -10,11 +10,10 @@ export function Home() {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.hash) {
-      const element = document.querySelector(location.hash);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
+    const state = location.state as { scrollTo?: string } | null;
+    if (state?.scrollTo) {
+      const element = document.getElementById(state.scrollTo);
+      element?.scrollIntoView({ behavior: "smooth" });
     }
   }, [location]);
 

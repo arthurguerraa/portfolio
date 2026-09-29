@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const NAV_LINKS = [
-  { label: "Sobre", href: "#sobre" },
-  { label: "Projetos", href: "#projetos" },
-  { label: "Skills", href: "#skills" },
-  { label: "Contato", href: "#contato" },
+  { label: "Sobre", id: "sobre" },
+  { label: "Projetos", id: "projetos" },
+  { label: "Skills", id: "skills" },
+  { label: "Contato", id: "contato" },
 ];
 
 export function Navbar() {
@@ -33,12 +33,14 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  function handleNavClick(e: React.MouseEvent, href: string) {
-    if (location.pathname !== "/") {
-      e.preventDefault();
-      navigate(`/${href}`);
+  function handleNavClick(e: React.MouseEvent, id: string) {
+    e.preventDefault();
+
+    if (location.pathname === "/") {
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/", { state: { scrollTo: id } });
     }
-    // se já está na Home, deixa o comportamento padrão do <a href="#..."> agir normalmente
   }
 
   return (
@@ -49,11 +51,10 @@ export function Navbar() {
     >
       <nav className="max-w-5xl mx-auto flex justify-center gap-8 px-6 py-4 font-mono text-sm">
         {NAV_LINKS.map((link) => (
-          
           <a
-            key={link.href}
-            href={link.href}
-            onClick={(e) => handleNavClick(e, link.href)}
+            key={link.id}
+            href={`#${link.id}`}
+            onClick={(e) => handleNavClick(e, link.id)}
             className="text-foreground/80 hover:text-primary transition-colors"
           >
             {link.label}
