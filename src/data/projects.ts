@@ -170,22 +170,22 @@ export const projects: Project[] = [
     "Lightbox da galeria com navegação por teclado (setas e Esc)",
     "Atenção a acessibilidade: aria-label, aria-expanded, contraste revisado para WCAG AA",
   ],
-  imageUrl: "/images/batman-hero.png", 
+  imageUrl: assetUrl("/images/batman-hero.png"), 
   screenshots: [
     {
-      imageUrl: "/images/batman-hero.png", // TODO: substituir pelo print real
+      imageUrl: assetUrl("/images/batman-hero.png"), 
       title: "Hero",
       description:
         "Seção inicial com efeito parallax, chuva animada em canvas e glitch no título ao passar o mouse.",
     },
     {
-      imageUrl: "/images/batman-galeria.png", 
+      imageUrl: assetUrl("/images/batman-galeria.png"), 
       title: "Galeria",
       description:
         "Lightbox de cenas do filme com navegação por teclado e cursor customizado.",
     },
     {
-      imageUrl: "/images/batman-avaliacoes.png", 
+      imageUrl: assetUrl("/images/batman-avaliacoes.png"), 
       title: "Avaliações",
       description:
         "Carrossel automático de críticas com contagem numérica animada nas notas.",
