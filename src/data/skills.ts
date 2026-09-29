@@ -24,7 +24,6 @@ export const skills: SkillCategory[] = [
     category: "Back-end",
     items: [
       { name: "Node.js", iconKey: "nodedotjs" },
-      { name: "Java", iconKey: "java" },
     ],
   },
   {
