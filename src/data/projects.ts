@@ -1,4 +1,5 @@
 import type { Project } from "@/types/project";
+import { assetUrl } from "@/lib/assets";
 
 export const projects: Project[] = [
   {
@@ -30,7 +31,7 @@ export const projects: Project[] = [
     imageUrl: "/src/assets/images/cinetrack-index.png", /* colocar o print do projeto */
     screenshots: [
       {
-        imageUrl: "/images/cinetrack-home.png", 
+        imageUrl: assetUrl("/images/cinetrack-home.png"), 
         title: "Home",
         description:
           "Tela inicial com filmes em destaque e busca rápida de títulos.",
