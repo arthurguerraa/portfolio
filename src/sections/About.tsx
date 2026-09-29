@@ -10,7 +10,7 @@ export function About() {
           Sobre mim
         </h2>
 
-        <div className="space-y-5">
+        <div className="space-y-5 text-justify">
           <TerminalText>
             Comecei minha formação técnica em Desenvolvimento de Sistemas na
             ETEC Professor Basilides de Godoy, e atualmente curso Análise e
