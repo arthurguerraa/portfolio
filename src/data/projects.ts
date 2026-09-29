@@ -125,22 +125,22 @@ export const projects: Project[] = [
     "Acessibilidade: navegação completa por teclado, focus trap em modais com <dialog> nativo, aria-live no timer",
     "Modais reescritos para eliminar memory leak de listeners empilhados a cada abertura",
   ],
-  imageUrl: "/images/enade-preview.png", 
+  imageUrl: assetUrl("/images/enade-preview.png"), 
   screenshots: [
     {
-      imageUrl: "/images/enade-simulado.png", 
+      imageUrl: assetUrl("/images/enade-simulado.png"), 
       title: "Tela do simulado",
       description:
         "Navegação rápida entre as 35 questões, com indicação visual de respondida, pendente e atual.",
     },
     {
-      imageUrl: "/images/enade-resultado.png", 
+      imageUrl: assetUrl("/images/enade-resultado.png"), 
       title: "Resultado",
       description:
         "Aproveitamento geral com métricas de acerto, erro e tempo total de prova.",
     },
     {
-      imageUrl: "/images/enade-gabarito.png", 
+      imageUrl: assetUrl("/images/enade-gabarito.png"), 
       title: "Gabarito comparativo",
       description:
         "Comparação questão a questão entre a resposta do usuário e o gabarito oficial do INEP.",
