@@ -19,7 +19,8 @@ export function ProjectDetail() {
     <section className="py-16 px-6 min-h-screen bg-background">
       <div className="max-w-3xl mx-auto">
         <Link
-          to="/#projetos"
+          to="/"
+          state={{ scrollTo: "projetos" }}
           className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-8 font-mono"
         >
           <ArrowLeft size={16} />
@@ -40,7 +41,9 @@ export function ProjectDetail() {
 
         <div className="space-y-8">
           <div>
-            <h2 className="font-mono text-primary text-sm mb-2">$ sobre_o_projeto</h2>
+            <h2 className="font-mono text-primary text-sm mb-2">
+              $ sobre_o_projeto
+            </h2>
             <p className="text-muted-foreground leading-relaxed">
               {project.problem}
             </p>
@@ -81,9 +84,7 @@ export function ProjectDetail() {
 
           {project.screenshots && project.screenshots.length > 0 && (
             <div>
-              <h2 className="font-mono text-primary text-sm mb-4">
-                $ telas
-              </h2>
+              <h2 className="font-mono text-primary text-sm mb-4">$ telas</h2>
               <ScreenshotGallery screenshots={project.screenshots} />
             </div>
           )}

@@ -3,6 +3,13 @@ import { MatrixRain } from "@/effects/MatrixRain";
 import { TerminalText } from "@/components/shared/TerminalText";
 
 export function Hero() {
+  function handleScrollToProjects(e: React.MouseEvent) {
+    e.preventDefault();
+    document.getElementById("projetos")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+
   return (
     <section
       id="hero"
@@ -26,24 +33,26 @@ export function Hero() {
           limpo e uma boa experiência para o usuário.
         </TerminalText>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button
-            size="lg"
-            className="font-mono"
-            render={<a href="#projetos">Ver Projetos</a>}
-          />
+        <Button
+          size="lg"
+          className="font-mono"
+          render={
+            <a href="#projetos" onClick={handleScrollToProjects}>
+              Ver Projetos
+            </a>
+          }
+        />
 
-          <Button
-            size="lg"
-            variant="outline"
-            className="font-mono"
-            render={
-              <a href="/curriculo-arthur-guerra.pdf" download>
-                Baixar CV
-              </a>
-            }
-          />
-        </div>
+        <Button
+          size="lg"
+          variant="outline"
+          className="font-mono"
+          render={
+            <a href="/curriculo-arthur-guerra.pdf" download>
+              Baixar CV
+            </a>
+          }
+        />
       </div>
     </section>
   );
